@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+    .container {
+      width: 400px;
+      padding: 10% 0 0;
+      margin: auto;
+      background-color:#bfbdbd;
+    }
+    .input-icons i {
+        position: absolute;
+    }
+
+        .icon {
+            padding: 10px;
+            min-width: 30px;
+            margin: 5px 0 5px;
+        }
+
+        .input-field {
+            width: 100%;
+            border: 1px solid #666363;
+            margin: 0 0 15px;
+            padding: 15px;
+            text-align: inherit;
+            box-sizing: border-box;
+            outline: 1;
+            background: white;
+
+        }
+
+        .form {
+          position:relative;
+          background: white;
+          max-width: 400px;
+          margin: 0 auto 100px;
+          padding: 45px;
+          text-align: center;
+          font-family: sans-serif;
+        }
+
+          .signup{         /*button*/
+          outline: 0;
+          background: #549bf7;
+          width:100%;
+          border: 0;
+          padding: 15px;
+          color: white;
+          font-size: 14px;
+          cursor: pointer;
+        }
+
+        .form .message{
+          color: #a8a7a5;
+        }
+    </style>
+
+  </head>
+  <body>
+    <div class="topnav"> <!-- navbar starts-->
+        <a class="active" href="#">Show<b>Tracker</b></a>
+        <a href="index.html">Home</a>
+        <a href="add.html">Add</a>
+      <div class="topnav-right">
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign up</a>
+      </div>
+    </div> <!--navbarend-->
+    <div class="container">
+      <div class="login">
+      <div class="form">
+        <form class="signup-form" action="index.html" method="post">
+          <h3>Sign up</h3>
+        <div class="input-icons">
+            <i class="fas fa-user icon"></i>
+            <input class="input-field" type="text" placeholder="Name" required >
+            <i class="fas fa-at icon"></i>
+            <input class="input-field" type="text" placeholder="Email" required>
+            <i class="fas fa-lock icon"></i>
+            <input class="input-field" type="text" placeholder="Password" required>
+        </div>
+        <p class="message">By clicking Sign up, you agree to <a href="#" style="text-decoration:none; color: black;">terms & conditions</a> and <a href="#" style="text-decoration:none; color: black;">privacy policy</a></p>
+        <button class="signup" type="button" name="button">Sign up</button>
+        <p class="message">Already have an account? <a href="login.html" style="text-decoration:none; color: black;">Login in now</a></p>
+      </form>
+      </div> <!-- form end -->
+      </div> <!-- login end -->
+
+
+
+
+
+
+      <div class="signUp">
+
+      </div> <!-- signup end -->
+
+
+
+
+
+
+
+
+    </div> <!-- container end -->
+  </body>
+</html>

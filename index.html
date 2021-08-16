@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title></title>
+  <style>
+
+  /*jumbotron abc start */
+  .jumbotron{
+    margin-top:-5px;
+    margin-bottom: 16px;
+    padding: 16px;
+  }
+
+  .abc {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .abc li {
+    display: inline-block;
+    min-width: 0.5em;
+    margin-right: 5px;
+  }
+
+  .abc a {
+    text-decoration: none;
+    display: block;
+    font-family:Arial;3
+    position: relative;
+    color: black;
+    padding: 0;
+    font-size: 25px;
+  }
+
+  .abc a:hover {
+    color: #c69f73;
+  }
+
+  .abc a:hover:before {
+    left: 0;
+    width: 100%;
+  }
+
+  .abc a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: .5px;
+    background-color: #c69f73;
+    bottom: calc(-1px);
+    right: 0;
+    transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  } /* jumbotron abc ends*/
+
+  .hrButton .btn {
+    background-color: #9d9b9e;
+    margin-top: 10px;
+  }
+
+  .hrButton {
+    display: block;
+    align:center;
+    margin: 30px 200px 100px 200px;
+    text-align: justify;
+  }
+
+/* panel, cards starts*/
+  .panel-heading{
+    color: #444;
+    font-weight: bold;
+    font-size: 85%;
+    background-color: #f6f6f6;
+    padding: 10px 15px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+
+  .search{
+    color: #4f4f4f;
+    font-weight: 300;
+    font-size: 1.5em;
+    padding: 7px;
+    margin-top: -10px;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+  }
+
+  .cards {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: none;
+  }
+
+  .card-body{
+    border-style: none;
+    text-align: center;
+    background-color: white;
+  }
+</style>
+  </head>
+
+  <body>
+    <div class="topnav"> <!-- navbar starts-->
+      <a class="active" href="index.html">Show<b>Trackr</b></a>
+      <a href="index.html">Home</a>
+      <a href="add.html">Add</a>
+    <div class="topnav-right">
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign up</a>
+    </div>
+  </div> <!--navbarend-->
+
+  <div class="jumbotron jumbotron-fluid"> <!--jumbotron abc starts-->
+  <div class="container">
+    <ul class="abc">
+                <li><span onclick="filterSelection('0-9')">0-9</span></li>
+                <li><span onclick="filterSelection('A')">A</span></li>
+                <li><span onclick="filterSelection('B')">B</span></li>
+                <li><span onclick="filterSelection('C')">C</span></li>
+                <li><span onclick="filterSelection('D,')">D</span></li>
+                <li><span onclick="filterSelection('E')">E</span></li>
+                <li><span onclick="filterSelection('F')">F</span></li>
+                <li><span onclick="filterSelection('G')">G</span></li>
+                <li><span onclick="filterSelection('H')">H</span></li>
+                <li><span onclick="filterSelection('I')">I</span></li>
+                <li><span onclick="filterSelection('J')">J</span></li>
+                <li><span onclick="filterSelection('K')">K</span></li>
+                <li><span onclick="filterSelection('L')">L</span></li>
+                <li><span onclick="filterSelection('M')">M</span></li>
+                <li><span onclick="filterSelection('N')">N</span></li>
+                <li><span onclick="filterSelection('O')">O </span></li>
+                <li><span onclick="filterSelection('P')">P </span></li>
+                <li><span onclick="filterSelection('Q')">Q </span></li>
+                <li><span onclick="filterSelection('R')">R </span></li>
+                <li><span onclick="filterSelection('S')">S </span></li>
+                <li><span onclick="filterSelection('T')">T </span></li>
+                <li><span onclick="filterSelection('U')">U </span></li>
+                <li><span onclick="filterSelection('V')">V </span></li>
+                <li><span onclick="filterSelection('W')">W </span></li>
+                <li><span onclick="filterSelection('X')">X </span></li>
+                <li><span onclick="filterSelection('Y')">Y </span></li>
+                <li><span onclick="filterSelection('Z')">Z </span></li>
+    </ul>
+  </div>
+  <div class="hrButton filterBtns"> <!--button starts-->
+    <button type="button" class="btn active" onclick="filterSelection('all')">All</button>
+    <button type="button" class="btn" onclick="filterSelection('action')">Action</button>
+    <button type="button" class="btn" onclick="filterSelection('adventure')">Adventure</button>
+    <button type="button" class="btn" onclick="filterSelection('animation')">Animation</button>
+    <button type="button" class="btn" onclick="filterSelection('children')">Children</button>
+    <button type="button" class="btn" onclick="filterSelection('comedy')">Comedy</button>
+    <button type="button" class="btn" onclick="filterSelection('crime')">Crime</button>
+    <button type="button" class="btn" onclick="filterSelection('documentary')">Documentary</button>
+    <button type="button" class="btn" onclick="filterSelection('drama')">Drama</button>
+    <button type="button" class="btn" onclick="filterSelection('family')">Family</button>
+    <button type="button" class="btn" onclick="filterSelection('fantasy')">Fantasy</button>
+    <button type="button" class="btn" onclick="filterSelection('food')">Food</button>
+    <button type="button" class="btn" onclick="filterSelection('home and garden')">Home and Garden</button>
+    <button type="button" class="btn" onclick="filterSelection('horror')">Horror</button>
+    <button type="button" class="btn" onclick="filterSelection('miniSeries')">Mini-Series</button>
+    <button type="button" class="btn" onclick="filterSelection('mystery')">Mystery</button>
+    <button type="button" class="btn" onclick="filterSelection('news')">News</button>
+    <button type="button" class="btn" onclick="filterSelection('reality')">Reality</button>
+    <button type="button" class="btn" onclick="filterSelection('sciFi')">Sci-Fi</button>
+    <button type="button" class="btn" onclick="filterSelection('sport')">Sport</button>
+    <button type="button" class="btn" onclick="filterSelection('suspense')">Suspense</button>
+    <button type="button" class="btn" onclick="filterSelection('talkShow')">Talk Show</button>
+    <button type="button" class="btn" onclick="filterSelection('thriller')">Thriller</button>
+    <button type="button" class="btn" onclick="filterSelection('travel')">Travel</button>
+  </div>  <!--button ends-->
+</div> <!--jumbotron abc ends-->
+
+<div class="container"> <!-- panel ,cards -->
+  <div class="panel panel-default"> <!--panel starts-->
+    <div class="panel-heading">TOP 12 SHOWS
+    <span style="float:right;">
+      <input class="search" type="text" placeholder="Search...">
+    </span>
+    </div>
+  <div class="panel-body" style="clear:right;">
+    <div class="card-deck" style="margin-bottom:10px;"> <!-- first set -->
+    <div class="card filterElements adventure G">
+      <a href="gameOfThrones.html"><img class="card-img-top" src="images/image1.jpeg" alt="Card image cap"></a>
+      <div class="card-body">
+      <h5 class="card-title">Game of Thrones</h5>
+      <p class="card-text">Episodes:84</p>
+      </div>
+    </div>
+    <div class="card filterElements thriller B">
+    <img class="card-img-top" src="images/image2.jpeg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Breaking Bad</h5>
+      <p class="card-text">Episodes:79</p>
+    </div>
+    </div>
+    <div class="card filterElements suspense D">
+    <img class="card-img-top" src="images/image3.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Dexter</h5>
+      <p class="card-text">Episodes:123</p>
+    </div>
+    </div>
+    <div class="card filterElements comedy H">
+    <img class="card-img-top" src="images/image4.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">How I Met Your Mother</h5>
+      <p class="card-text">Episodes:219</p>
+    </div>
+    </div>
+  </div> <!-- first set ends -->
+  <div class="card-deck" style="margin-bottom:10px;"> <!--second set-->
+  <div class="card filterElements comedy F">
+  <img class="card-img-top" src="images/image5.jpeg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Friends</h5>
+    <p class="card-text">Episodes:95</p>
+  </div>
+  </div>
+  <div class="card filterElements action T">
+  <img class="card-img-top" src="images/image6.jpeg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">The Last Kingdom</h5>
+    <p class="card-text">Episodes:36</p>
+  </div>
+  </div>
+  <div class="card filterElements comedy T">
+  <img class="card-img-top" src="images/image7.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">The Big Bang Theory</h5>
+    <p class="card-text">Episodes:24</p>
+  </div>
+  </div>
+  <div class="card filterElements thriller B">
+  <img class="card-img-top" src="images/image8.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Black Mirror</h5>
+    <p class="card-text">Episodes:21</p>
+  </div>
+  </div>
+</div> <!--second set ends-->
+<div class="card-deck" style="margin-bottom:10px;"> <!--thired set-->
+<div class="card filterElements crime P">
+<img class="card-img-top" src="images/image9.jpeg" alt="Card image cap">
+<div class="card-body">
+  <h5 class="card-title">Peaky Blinders</h5>
+  <p class="card-text">Episodes:30</p>
+</div>
+</div>
+<div class="card filterElements horror T">
+<img class="card-img-top" src="images/image10.jpg" alt="Card image cap">
+<div class="card-body">
+  <h5 class="card-title">The Stranger Things</h5>
+  <p class="card-text">Episodes:25</p>
+</div>
+</div>
+<div class="card filterElements thriller B">
+<img class="card-img-top" src="images/image11.jpeg" alt="Card image cap">
+<div class="card-body">
+  <h5 class="card-title">Bodyguard</h5>
+  <p class="card-text">Episodes:6</p>
+</div>
+</div>
+<div class="card filterElements mystery O">
+<img class="card-img-top" src="images/image12.jpeg" alt="Card image cap">
+<div class="card-body">
+  <h5 class="card-title">One of us</h5>
+  <p class="card-text">Episodes:5</p>
+</div>
+</div>
+</div><!--third set ends-->
+</div>
+</div> <!--panel ends -->
+</div> <!-- container ends -->
+
+<script>
+filterSelection("all");
+ function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName(".filterElements");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+    removeActiveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) addActiveClass(x[i], "show");
+  }
+ }
+
+ function addActiveClass(ele, name) {
+    var i, arr1, arr2;
+    arr1 = ele.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+       if (arr1.indexOf(arr2[i]) == -1) {
+          ele.className += " " + arr2[i];
+       }
+    }
+ }
+ function removeActiveClass(ele, name) {
+    var i, arr1, arr2;
+    arr1 = ele.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+       while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+       }
+    }
+    ele.className = arr1.join(" ");
+ }
+ var filterBtns = document.getElementsByClassName(".filterBtns");
+ var btns = filterBtns.getElementsByClassName("button");
+ for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+       var current = document.getElementsByClassName("active");
+       current[0].className = current[0].className.replace(" active", "");
+       this.className += " active";
+    });
+ }
+</script>
+  </body>
+</html>

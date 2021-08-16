@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+    .container {
+      width: 400px;
+      padding: 10% 0 0;
+      margin: auto;
+      background-color:#bfbdbd;
+    }
+    .input-icons i {
+        position: absolute;
+    }
+
+        .icon {
+            padding: 10px;
+            min-width: 30px;
+            margin: 5px 0 5px;
+        }
+
+        .input-field {
+            width: 100%;
+            border: 1px solid #666363;
+            margin: 0 0 15px;
+            padding: 15px;
+            text-align: inherit;
+            box-sizing: border-box;
+            outline: 1;
+            background: white;
+
+        }
+
+        .form {
+          position:relative;
+          background: white;
+          max-width: 360px;
+          margin: 0 auto 100px;
+          padding: 45px;
+          text-align: center;
+          font-family: sans-serif;
+        }
+
+        .logIn { /*button*/
+          outline: 0;
+          background: #73c99e;
+          width:100%;
+          border: 0;
+          padding: 15px;
+          color: white;
+          font-size: 14px;
+          cursor: pointer;
+        }
+
+        .form .message1{
+          color: #a8a7a5;
+        }
+
+        /* divider text */
+        .divider {
+        	width:300px;
+        	text-align:center;
+        }
+
+        .divider hr {
+        	margin-left:auto;
+        	margin-right:auto;
+        	width:40%;
+
+        }
+
+        .left {
+        	float:left;
+        }
+
+        .right {
+        	float:right;
+        }
+
+          /*bottom button */
+        .fb {
+          outline: 0;
+          background: #73c99e;
+          width:100%;
+          border: 0;
+          padding: 15px;
+          color: white;
+          font-size: 14px;
+          cursor: pointer;
+          background: #260f8c;
+          margin: 15px 0 15px;
+        }
+
+        .bottomButton i {
+          position: absolute;
+          color: white;
+
+        }
+
+        .google{
+          outline: 0;
+          background: #73c99e;
+          width:100%;
+          border: 0;
+          padding: 15px;
+          color: white;
+          font-size: 14px;
+          cursor: pointer;
+          background: #8a0e1e;
+          margin: 10px 0 15px;
+        }
+
+        .iconbottom {
+            padding: 20px;
+            min-width: 30px;
+            margin: 5px 0 5px;
+        }
+    </style>
+
+  </head>
+  <body>
+    <div class="topnav"> <!-- navbar starts-->
+        <a class="active" href="#">Show<b>Tracker</b></a>
+        <a href="index.html">Home</a>
+        <a href="add.html">Add</a>
+      <div class="topnav-right">
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign up</a>
+      </div>
+    </div> <!--navbarend-->
+
+    <div class="container"> <!--login form -->
+      <div class="login">
+      <div class="form">
+        <form class="login-form" action="index.html" method="post">
+          <h3>Log in</h3>
+        <div class="input-icons">
+            <i class="fas fa-at icon"></i>
+            <input id= "userid" class="input-field" type="text" placeholder="Email">
+            <i class="fas fa-lock icon"></i>
+            <input id="pswrd" class="input-field" type="text" placeholder="Password">
+        </div>
+        <button class="logIn" type="button" name="button">Log in</button>
+        <p class="message"> <a href="#" style="text-decoration:none; color: black;">Forgot your password?</a></p>
+        <p class="message1">Don't have an account yet? <a href="signup.html" style="text-decoration:none; color: black;">Sign up</a></p>
+        <!-- Divider Text -->
+        <div class="divider">
+        <hr class="left"/>or<hr class="right" />
+        </div>
+        <div class="bottomButton">
+          <i class="fab fa-facebook-f iconbottom" ></i>
+          <button class= "fb" type="button" name="fbButton"> Sign in with facebook </button>
+          <i class="fab fa-google-plus-g iconbottom"></i>
+          <button class= "google" type="button" name="googleButton"> Sign in with google </button>
+        </div>
+        </form>
+      </div> <!-- form end -->
+      </div> <!-- login end -->
+</div> <!-- container end -->
+
+<script>
+  var userData = [{userName:"Anne", userPassword:Abc}, {userName:"dilo", userPassword:Cde},{userName:"Anu", userPassword:Pqr},{userName:"Dhivya", userPassword:Lmn},{userName:"Nithu", userPassword:Jkl}]
+
+
+       function check(form) {
+           for (i = 0; i < userData.length; i++) {
+               if (form.userid.value == userData[i].userName && form.pswrd.value == userData[i].userPassword) {
+                  alert("Login Successful")
+                   break;
+               } else {
+                   alert("Unsuccessful")
+               }
+           }
+       }
+
+</script>
+  </body>
+</html>
